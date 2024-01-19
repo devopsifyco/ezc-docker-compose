@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         choice(name: 'APP', choices: ['BackEnd', 'FrontEnd-Android', 'Database'], defaultValue: 'BackEnd', description: 'You could have other types of parameters besides choice.')
-        choice(name: 'ENVIRONMENT', choices: ['test', "demo"], defaultValue: 'test' description: 'You could have other types of parameters besides choice.')
+        choice(name: 'ENVIRONMENT', choices: ['test', "demo"], defaultValue: 'test', description: 'You could have other types of parameters besides choice.')
         string(name: 'VERSION', defaultValue: '', description: 'version of app to deploy')
     }
     stages {
