@@ -3,14 +3,14 @@ pipeline {
 
     parameters {
         string(name: 'APP', defaultValue: 'BackEnd', description: 'version of app to deploy')
-        string(name: 'ENVIRONMENT', defaultValue: 'test', description: 'version of app to deploy')
-        string(name: 'VERSION', defaultValue: '', description: 'version of app to deploy')
+        // string(name: 'ENVIRONMENT', defaultValue: 'test', description: 'version of app to deploy')
+        // string(name: 'VERSION', defaultValue: '', description: 'version of app to deploy')
     }
     stages {
         stage('build') {
             steps {
                 sh 'node --version'
-                print "${params.ENVIRONMENT} ${params.APP} ${params.VERSION}\r\n"
+                print "${params.APP}"
             }
         }
     }
