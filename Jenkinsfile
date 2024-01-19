@@ -8,6 +8,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'node --version'
+                print "${params.Release}\r\n"
+                print "${params.ScanSonar}\r\n"
             }
         }
     }
